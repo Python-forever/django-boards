@@ -1,0 +1,72 @@
+
+Basic Setup
+First thing, set your identity:
+
+git config --global user.name "Vitor Freitas"
+git config --global user.email vitor@simpleisbetterthancomplex.com
+
+
+In the project root (the same directory as manage.py is), initialize a git repository:
+
+git init
+Output:Initialized empty Git repository in /Users/vitorfs/Development/myproject/.git/
+
+
+Check the status of the repository:
+
+git status
+
+Output:
+
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  accounts/
+  boards/
+  manage.py
+  myproject/
+  requirements.txt
+  static/
+  templates/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+.gitignore file:This file set regular expression for the file no need to configure in hgit repo
+
+__pycache__/
+*.py[cod]
+.env
+venv/
+
+
+# SQLite database files
+
+*.sqlite3
+
+
+Now add the files to the repository:
+
+git add .
+Notice the dot here. The command above is telling Git to add all untracked files within the current directory.
+
+Now make the first commit:
+
+git commit -m "Initial commit"
+
+
+Create an account in github with same username and email.
+Now create a repository in git
+
+
+Now configure the remote repository:
+git remote add origin https://github.com/Python-forever/django-boards.git  #django-board is a repo taken as example
+
+
+Now push the code to the remote server, that is, to the GitHub repository:
+git push origin master
+
